@@ -1,0 +1,8 @@
+system-ghc: true
+install-ghc: false
+
+templates:
+  params:
+    author-name: Preetham Gujjula
+    author-email: libraries@mail.preetham.io
+    github-username: pgujjula
