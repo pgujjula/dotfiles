@@ -6,3 +6,8 @@ templates:
     author-name: Preetham Gujjula
     author-email: libraries@mail.preetham.io
     github-username: pgujjula
+
+build:
+  haddock-arguments:
+    haddock-args:
+      - "--optghc=-Wno-everything"
