@@ -1,0 +1,4 @@
+:set prompt "\ESC[34mλ> \ESC[m"
+:set -freverse-errors
+:set -XOverloadedStrings
+:set -Wno-missing-home-modules
