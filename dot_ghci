@@ -2,3 +2,4 @@
 :set -freverse-errors
 :set -XOverloadedStrings
 :set -Wno-missing-home-modules
+:set -Wno-unused-packages
