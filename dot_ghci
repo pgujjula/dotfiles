@@ -3,3 +3,4 @@
 :set -XOverloadedStrings
 :set -Wno-missing-home-modules
 :set -Wno-unused-packages
+:set -Wno-type-defaults
