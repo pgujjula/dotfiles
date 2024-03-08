@@ -2,6 +2,7 @@
 :set -freverse-errors
 :set -XOverloadedStrings
 :set -XImportQualifiedPost
+:set -XDataKinds
 :set -Wno-missing-home-modules
 :set -Wno-unused-packages
 :set -Wno-type-defaults
