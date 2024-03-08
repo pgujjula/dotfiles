@@ -1,6 +1,7 @@
 :set prompt "\ESC[34mλ> \ESC[m"
 :set -freverse-errors
 :set -XOverloadedStrings
+:set -XImportQualifiedPost
 :set -Wno-missing-home-modules
 :set -Wno-unused-packages
 :set -Wno-type-defaults
