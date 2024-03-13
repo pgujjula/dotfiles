@@ -9,4 +9,7 @@ gsettings set org.gnome.desktop.interface gtk-theme Adwaita-dark
 
 nvim --headless +:q
 
-for path in $(nvr --nostart --serverlist); do   nvr --nostart --servername $path -cc 'so ~/.config/nvim/init.vim'; done
+for path in $(nvr --nostart --serverlist)
+do
+  nvr --nostart --servername $path -cc 'so ~/.config/nvim/init.vim'
+done
