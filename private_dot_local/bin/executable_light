@@ -1,0 +1,11 @@
+#!/bin/bash
+ln -sf ~/.config/alacritty/iceberg_light.toml ~/.config/alacritty/alacritty.toml
+ln -sf ~/.config/tmux/tmuxline.conf.light ~/.config/tmux/tmuxline.conf
+tmux source-file ~/.tmux.conf 2> /dev/null
+
+gsettings set org.gnome.desktop.interface color-scheme default
+gsettings set org.gnome.desktop.interface gtk-theme Adwaita
+
+nvim --headless +:q
+
+for path in $(nvr --nostart --serverlist); do   nvr --nostart --servername $path -cc 'so ~/.config/nvim/init.vim'; done
