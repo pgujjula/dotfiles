@@ -6,3 +6,6 @@ import = [
 bindings = [
   {key = "F11", action = "ToggleFullscreen"}
 ]
+
+[font]
+normal = {family = "Source Code Pro for Powerline"}
