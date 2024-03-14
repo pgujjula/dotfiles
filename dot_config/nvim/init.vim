@@ -24,6 +24,7 @@ Plug 'gpanders/editorconfig.nvim'
 call plug#end()
 
 let g:airline_powerline_fonts = 1
+let g:man_hardwrap=0
 
 " to truncate all path sections but the last one, e.g. a branch
 " 'foo/bar/baz' becomes 'f/b/baz', use
