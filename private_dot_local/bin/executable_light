@@ -11,5 +11,6 @@ nvim --headless +:q
 
 for path in $(nvr --nostart --serverlist)
 do
-  nvr --nostart --servername $path -cc 'so ~/.config/nvim/init.vim'
+  nvr --nostart --servername $path -cc 'source ~/.config/nvim/init.vim'
+  nvr --nostart --servername $path -cc 'AirlineRefresh'
 done
