@@ -1,8 +1,6 @@
 #!/bin/bash
 ln -sf ~/.config/alacritty/iceberg_dark.toml ~/.config/alacritty/iceberg.toml
 touch ~/.config/alacritty/alacritty.toml
-ln -sf ~/.config/tmux/tmuxline.conf.dark ~/.config/tmux/tmuxline.conf
-tmux source-file ~/.tmux.conf 2> /dev/null
 
 gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 gsettings set org.gnome.desktop.interface gtk-theme Adwaita-dark
