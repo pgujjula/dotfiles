@@ -12,13 +12,11 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 """ themes
 Plug 'cocopon/iceberg.vim'
-" Plug 'iCyMind/NeoSolarized'
 Plug 'Mofiqul/dracula.nvim'
 
 """ statusline
 Plug 'vim-airline/vim-airline'
 Plug 'edkolev/tmuxline.vim'
-" Plug 'vim-airline/vim-airline-themes'
 
 """ EditorConfig support
 Plug 'gpanders/editorconfig.nvim'
