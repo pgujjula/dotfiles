@@ -40,3 +40,5 @@ HISTTIMEFORMAT="%F %T "
 export DEBFULLNAME="Preetham Gujjula"
 export DEBEMAIL="ubuntu@mail.preetham.io"
 
+# Haskell Stack
+export STACK_XDG=1
