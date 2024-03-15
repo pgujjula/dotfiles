@@ -10,6 +10,9 @@ PATH="$HOME/.cabal/bin:$HOME/.ghcup/bin:$HOME/.local/bin:$PATH"
 EDITOR="nvim"
 export PATH
 
+# Bash prompt
+PS1="\[\e[0;32m\]\u@\h\[\e[0m\] \[\e[1m\]\[\e[34m\]\W\[\e[0m\]$ "
+
 # Open manpages with neovim
 export MANPAGER='nvim +Man!'
 nvman ()
