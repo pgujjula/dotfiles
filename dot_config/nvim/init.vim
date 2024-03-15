@@ -17,9 +17,6 @@ Plug 'cocopon/iceberg.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'edkolev/tmuxline.vim'
 
-""" EditorConfig support
-Plug 'gpanders/editorconfig.nvim'
-
 call plug#end()
 
 let g:airline_powerline_fonts = 1
