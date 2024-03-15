@@ -12,7 +12,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 """ themes
 Plug 'cocopon/iceberg.vim'
-Plug 'Mofiqul/dracula.nvim'
 
 """ statusline
 Plug 'vim-airline/vim-airline'
