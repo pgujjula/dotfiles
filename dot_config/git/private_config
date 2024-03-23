@@ -2,8 +2,10 @@
 	name = Preetham Gujjula
 	email = gitcommit@mail.preetham.io
   signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAoOUV5ZNl4cS4iud+pKXCcXJPJDwqVd4lLgtLMRADfw
+
 [core]
 	editor = nvim
+
 [alias]
   # Log aliases courtesy of https://stackoverflow.com/a/34467298
   lg = lg1
