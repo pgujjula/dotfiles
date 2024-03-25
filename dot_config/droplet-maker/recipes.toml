@@ -1,0 +1,19 @@
+[recipes.base]
+username = "root"
+script = "scripts/base.sh"
+parent = "fedora-39-x64"
+
+[recipes.tools]
+username = "pgujjula"
+script = "scripts/tools.sh"
+parent = "base"
+
+[recipes.haskell-base]
+username = "pgujjula"
+script = "scripts/haskell-base.sh"
+parent = "tools"
+
+[recipes.project-euler]
+username = "pgujjula"
+script = "scripts/project-euler.sh"
+parent = "haskell-base"
