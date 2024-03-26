@@ -19,11 +19,6 @@ ghcup install ghc 9.4.8
 ghcup install ghc 9.6.4
 ghcup install ghc 9.8.1
 ghcup install hls
-stack config set install-ghc false --global
-stack config set system-ghc true --global
-echo "extra-lib-dirs:" >> $HOME/.stack/config.yaml
-echo "- /usr/local/lib64" >> $HOME/.stack/config.yaml
-echo "- /usr/local/lib" >> $HOME/.stack/config.yaml
 export TMPDIR=
 rm -rfv $HOME/tmp
 
