@@ -17,12 +17,9 @@ sudo dnf install -y blas-devel lapack-devel mpfr-devel \
 # Build project-euler
 git clone git@github.com:pgujjula/project-euler.git
 cd project-euler
-stack build --test --no-run-tests --bench --no-run-benchmarks --dependencies-only
-stack build --test --no-run-tests --bench --no-run-benchmarks --dependencies-only
-stack build --test --no-run-tests --bench --no-run-benchmarks --dependencies-only
-stack build --test --no-run-tests --bench --no-run-benchmarks project-euler-util
-stack build --test --no-run-tests --bench --no-run-benchmarks project-euler-util
-stack build --test --no-run-tests --bench --no-run-benchmarks project-euler-util
+stack build --test --no-run-tests --bench --no-run-benchmarks --haddock
+stack build --test --no-run-tests --bench --no-run-benchmarks --haddock
+stack build --test --no-run-tests --bench --no-run-benchmarks --haddock
 stack build --test --no-run-tests --bench --no-run-benchmarks
 stack build --test --no-run-tests --bench --no-run-benchmarks
 stack build --test --no-run-tests --bench --no-run-benchmarks
