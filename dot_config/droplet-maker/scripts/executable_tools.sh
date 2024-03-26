@@ -20,6 +20,10 @@ install xauth
 run
 EOF
 
+### Install configs
+# Install chezmoi
+sh -c "$(curl -fsLS get.chezmoi.io/lb)" -- init --apply pgujjula --ssh
+
 ### Neovim
 # Plugin manager
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
@@ -35,10 +39,6 @@ touch ~pgujjula/.Xauthority
 echo /usr/local/lib | sudo tee -a /etc/ld.so.conf
 echo /usr/local/lib64 | sudo tee -a /etc/ld.so.conf
 sudo ldconfig
-
-### Install configs
-# Install chezmoi
-sh -c "$(curl -fsLS get.chezmoi.io/lb)" -- init --apply pgujjula --ssh
 
 ### Clear all traces and exit
 rm -rfv ~/common-config
