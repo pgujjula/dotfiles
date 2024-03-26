@@ -21,6 +21,7 @@ install nodejs
 install waypipe
 install alacritty
 install python3-pip
+install firefox
 run
 EOF
 
