@@ -17,6 +17,7 @@ install gcc gmp gmp-devel make ncurses ncurses-libs xz perl bat fzf ag
 install git
 install neovim
 install xauth
+install nodejs
 run
 EOF
 
