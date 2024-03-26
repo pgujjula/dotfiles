@@ -18,6 +18,7 @@ install git
 install neovim
 install xauth
 install nodejs
+install waypipe
 run
 EOF
 
