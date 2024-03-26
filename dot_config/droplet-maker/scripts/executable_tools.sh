@@ -25,6 +25,8 @@ EOF
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
+nvim --headless +PlugInstall +qa
+
 ### Allow X11 Forwarding
 echo "X11Forwarding yes" | sudo tee -a /etc/ssh/sshd_config
 touch ~pgujjula/.Xauthority
