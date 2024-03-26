@@ -19,6 +19,7 @@ install neovim
 install xauth
 install nodejs
 install waypipe
+install alacritty
 run
 EOF
 
