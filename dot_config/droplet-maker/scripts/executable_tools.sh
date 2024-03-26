@@ -35,8 +35,8 @@ echo /usr/local/lib64 | sudo tee -a /etc/ld.so.conf
 sudo ldconfig
 
 ### Install configs
-git clone https://github.com/pgujjula/common-config.git
-bash common-config/install.sh
+# Install chezmoi
+sh -c "$(curl -fsLS get.chezmoi.io/lb)" -- init --apply pgujjula --ssh
 
 ### Clear all traces and exit
 rm -rfv ~/common-config
