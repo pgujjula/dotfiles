@@ -11,3 +11,7 @@ build:
   haddock-arguments:
     haddock-args:
       - "--optghc=-Wno-everything"
+
+extra-lib-dirs:
+- /usr/local/lib64
+- /usr/local/lib
