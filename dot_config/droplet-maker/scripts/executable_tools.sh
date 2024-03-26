@@ -20,10 +20,6 @@ install xauth
 run
 EOF
 
-git config --global user.name "Preetham Gujjula"
-git config --global user.email "gitcommit@mail.preetham.io"
-git config --global core.editor "nvim"
-
 ### Neovim
 # Plugin manager
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
