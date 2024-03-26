@@ -12,7 +12,16 @@ sudo swapon /swapfile
 
 # Install C dependencies
 sudo dnf install -y blas-devel lapack-devel mpfr-devel \
-  primesieve-devel primecount-devel
+  primesieve-devel
+
+# Install custom primecount
+git clone git@github.com:pgujjula/primecount
+cd primecount
+sudo dnf install -y cmake
+cmake . -DBUILD_SHARED_LIBS=ON -DBUILD_STATIC_LIBS=OFF
+cmake --build .
+sudo cmake --install .
+sudo ldconfig
 
 # Build project-euler
 git clone git@github.com:pgujjula/project-euler.git
