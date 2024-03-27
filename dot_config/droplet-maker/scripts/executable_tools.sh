@@ -36,6 +36,9 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 
 nvim --headless +PlugInstall +qa
 
+# nvr
+pip3 install nvr
+
 ### Install powerline fonts
 git clone https://github.com/powerline/fonts
 cd fonts
