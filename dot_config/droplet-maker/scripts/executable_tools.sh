@@ -39,6 +39,9 @@ nvim --headless +PlugInstall +qa
 # nvr
 pip3 install nvr
 
+### Set color scheme to dark
+dark
+
 ### Install powerline fonts
 git clone https://github.com/powerline/fonts
 cd fonts
