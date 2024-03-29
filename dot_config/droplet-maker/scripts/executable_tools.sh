@@ -22,6 +22,7 @@ install waypipe
 install alacritty
 install python3-pip
 install firefox
+install reuse
 run
 EOF
 
@@ -57,6 +58,9 @@ touch ~pgujjula/.Xauthority
 echo /usr/local/lib | sudo tee -a /etc/ld.so.conf
 echo /usr/local/lib64 | sudo tee -a /etc/ld.so.conf
 sudo ldconfig
+
+### Set git signing program to ssh-keygen, since 1Password isn't available
+git config --global gpg.ssh.program ssh-keygen
 
 ### Clear all traces and exit
 rm -rfv ~/common-config
