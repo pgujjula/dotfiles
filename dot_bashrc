@@ -64,3 +64,6 @@ _fzf_compgen_path() {
 _fzf_compgen_dir() {
   fd --type d --hidden --follow --exclude ".git" . "$1"
 }
+
+# Reload ssh key in remote tmux
+alias fixssh='eval $(tmux showenv -s SSH_AUTH_SOCK)'
