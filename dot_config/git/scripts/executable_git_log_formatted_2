@@ -12,4 +12,4 @@ git log \
   --abbrev-commit \
   --decorate \
   "--format=format:${GIT_LOG_FORMAT_2}" \
-  $1
+  $@
