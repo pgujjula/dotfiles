@@ -1,6 +1,11 @@
 system-ghc: true
 install-ghc: false
 
+# Since we use ghcup to install stack, we don't need to be notified of new stack
+# versions. Actually being notified of upgrades can be a little annoying, if a
+# new version is available but not yet available on ghcup.
+recommend-stack-upgrade: false
+
 templates:
   params:
     author-name: Preetham Gujjula
