@@ -46,6 +46,9 @@ export DEBEMAIL="ubuntu@mail.preetham.io"
 # Haskell Stack
 export STACK_XDG=1
 
+# Haskell GHCup
+export GHCUP_USE_XDG_DIRS=1
+
 # Use fd (https://github.com/sharkdp/fd) for listing path candidates.
 # - The first argument to the function ($1) is the base path to start traversal
 # - See the source code (completion.{bash,zsh}) for the details.
