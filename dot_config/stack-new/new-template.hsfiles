@@ -1,6 +1,7 @@
 {-# START_FILE package.yaml #-}
 # SPDX-FileCopyrightText: Copyright Preetham Gujjula
 # SPDX-License-Identifier: BSD-3-Clause
+spec-version: 0.36.0
 name:         {{name}}
 version:      0.1.0.0
 # synopsis:   Short description of your package
