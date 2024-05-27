@@ -6,7 +6,7 @@ name:         {{name}}
 version:      0.1.0.0
 # synopsis:   Short description of your package
 description:  Please see the README on GitHub at <https://github.com/{{github-username}}{{^github-username}}githubuser{{/github-username}}/{{name}}#readme>
-category:     {{category}}{{^category}}Web{{/category}}
+# category:   Web
 stability:    experimental
 github:       "{{github-username}}{{^github-username}}githubuser{{/github-username}}/{{name}}"
 author:       "{{author-name}}{{^author-name}}Author name here{{/author-name}}"
