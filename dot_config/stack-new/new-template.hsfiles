@@ -69,23 +69,28 @@ tests:
 main :: IO ()
 main = putStrLn "Test suite not yet implemented"
 
-{-# START_FILE src/Lib.hs #-}
+{-# START_FILE src/FibsMod.hs #-}
 -- SPDX-FileCopyrightText: Copyright Preetham Gujjula
 -- SPDX-License-Identifier: BSD-3-Clause
-module Lib (someFunc) where
+module FibsMod (fibsMod) where
 
-someFunc :: IO ()
-someFunc = putStrLn "someFunc"
+fibsMod :: Word -> [Word]
+fibsMod n = xs
+  where
+    xs = 0 : 1 : zipWith (\a b -> (a + b) `rem` n) xs (tail xs)
 
 {-# START_FILE app/Main.hs #-}
 -- SPDX-FileCopyrightText: Copyright Preetham Gujjula
 -- SPDX-License-Identifier: BSD-3-Clause
 module Main (main) where
 
-import Lib (someFunc)
+import FibsMod (fibsMod)
 
 main :: IO ()
-main = someFunc
+main =
+  putStrLn $
+    "Sum of the first 1000 Fibonacci numbers modulo 60: "
+      ++ show (sum (take 1000 (fibsMod 60)))
 
 {-# START_FILE README.md #-}
 <!--
