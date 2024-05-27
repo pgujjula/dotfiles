@@ -24,6 +24,9 @@ extra-doc-files:
 
 language: Haskell2010
 
+default-extensions:
+- ImportQualifiedPost
+
 dependencies:
 - base >= 4.7 && < 5
 
@@ -62,12 +65,56 @@ tests:
     - -with-rtsopts=-N
     dependencies:
     - {{name}}
+    - tasty
+    - tasty-hunit
 
 {-# START_FILE test/Main.hs #-}
 -- SPDX-FileCopyrightText: Copyright Preetham Gujjula
 -- SPDX-License-Identifier: BSD-3-Clause
+
+import Test.FibsMod qualified (tests)
+import Test.Tasty (TestTree, defaultMain, testGroup)
+
 main :: IO ()
-main = putStrLn "Test suite not yet implemented"
+main = defaultMain tests
+
+tests :: TestTree
+tests =
+  testGroup
+    ""
+    [ Test.FibsMod.tests
+    ]
+
+{-# START_FILE test/Test/FibsMod.hs #-}
+-- SPDX-FileCopyrightText: Copyright Preetham Gujjula
+-- SPDX-License-Identifier: BSD-3-Clause
+
+module Test.FibsMod (tests) where
+
+import FibsMod (fibsMod)
+import Test.Tasty (TestTree, testGroup)
+import Test.Tasty.HUnit (testCase, (@?=))
+
+tests :: TestTree
+tests =
+  testGroup
+    "FibsMod"
+    [ fibsModTests
+    ]
+
+fibsModTests :: TestTree
+fibsModTests =
+  testGroup
+    "fibsMod"
+    [ testCase "mod 1" $
+        take 10 (fibsMod 1) @?= [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      testCase "mod 2" $
+        take 10 (fibsMod 2) @?= [0, 1, 1, 0, 1, 1, 0, 1, 1, 0],
+      testCase "mod 5" $
+        take 10 (fibsMod 5) @?= [0, 1, 1, 2, 3, 0, 3, 3, 1, 4],
+      testCase "mod 30" $
+        take 10 (fibsMod 30) @?= [0, 1, 1, 2, 3, 5, 8, 13, 21, 4]
+    ]
 
 {-# START_FILE src/FibsMod.hs #-}
 -- SPDX-FileCopyrightText: Copyright Preetham Gujjula
@@ -77,7 +124,7 @@ module FibsMod (fibsMod) where
 fibsMod :: Word -> [Word]
 fibsMod n = xs
   where
-    xs = 0 : 1 : zipWith (\a b -> (a + b) `rem` n) xs (tail xs)
+    xs = 0 : (1 `rem` n) : zipWith (\a b -> (a + b) `rem` n) xs (tail xs)
 
 {-# START_FILE app/Main.hs #-}
 -- SPDX-FileCopyrightText: Copyright Preetham Gujjula
