@@ -13,6 +13,13 @@ stack new $PROJECT_NAME ~/.config/stack-new/new-template.hsfiles \
   -p "resolver:lts-21.25"
 cd $PROJECT_NAME
 
+# We use [[ and ]] for wrapping GitHub Actions config values instead of {{ and
+# }}, to avoid conflicting with the hsfiles template parameters. We substitute
+# the [[ and ]] for {{ and }} here, after the project is created from the
+# hsfiles template.
+sed -i -e 's/\[\[/\{\{/g' .github/workflows/ci.yml
+sed -i -e 's/\]\]/\}\}/g' .github/workflows/ci.yml
+
 # Generate cabal file
 stack build 2>/dev/null
 rm -r .stack-work
