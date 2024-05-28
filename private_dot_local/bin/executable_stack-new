@@ -1,0 +1,21 @@
+#!/bin/sh
+
+set -e
+
+if [ "$#" != "1" ] ; then
+  echo "Expected 1 argument, got $# arguments"
+  exit 1
+fi
+
+PROJECT_NAME=$1
+
+stack new $PROJECT_NAME ~/.config/stack-new/new-template.hsfiles \
+  -p "resolver:lts-21.25"
+cd $PROJECT_NAME
+
+# Generate cabal file
+stack build 2>/dev/null
+rm -r .stack-work
+
+git init
+cd ..
