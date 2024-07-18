@@ -59,10 +59,6 @@ tests:
     dependencies:
     - {{name}}
 
-{-# START_FILE Setup.hs #-}
-import Distribution.Simple
-main = defaultMain
-
 {-# START_FILE test/Spec.hs #-}
 main :: IO ()
 main = putStrLn "Test suite not yet implemented"
