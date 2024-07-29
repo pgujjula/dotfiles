@@ -14,6 +14,7 @@ sudo dnf shell -y << EOF
 upgrade
 install tmux wget unzip zip ncurses-devel cloc time htop traceroute
 install gcc gmp gmp-devel make ncurses ncurses-libs xz perl bat fzf ag
+install exa
 install git
 install neovim
 install xauth
