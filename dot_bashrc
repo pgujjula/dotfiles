@@ -70,3 +70,6 @@ _fzf_compgen_dir() {
 
 # Reload ssh key in remote tmux
 alias fixssh='eval $(tmux showenv -s SSH_AUTH_SOCK)'
+
+# Alias for 'exa' that's easier to type quickly
+alias lsa='exa'
