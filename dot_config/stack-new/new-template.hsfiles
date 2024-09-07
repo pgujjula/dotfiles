@@ -21,6 +21,8 @@ extra-doc-files:
 - CHANGELOG.md
 - LICENSES/BSD-3-Clause.txt
 
+language: Haskell2010
+
 dependencies:
 - base >= 4.7 && < 5
 
