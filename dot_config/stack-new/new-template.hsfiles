@@ -13,6 +13,9 @@ maintainer:   "{{author-email}}{{^author-email}}example@example.com{{/author-ema
 copyright:    "{{copyright}}{{^copyright}}{{year}}{{^year}}2024{{/year}} {{author-name}}{{^author-name}}Author name here{{/author-name}}{{/copyright}}"
 license:      BSD-3-Clause
 
+tested-with:
+- GHC == 8.10.7
+
 extra-doc-files:
 - README.md
 - CHANGELOG.md
