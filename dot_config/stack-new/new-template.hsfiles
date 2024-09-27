@@ -1,27 +1,22 @@
 {-# START_FILE package.yaml #-}
 # SPDX-FileCopyrightText: Copyright Preetham Gujjula
 # SPDX-License-Identifier: BSD-3-Clause
-name:                {{name}}
-version:             0.1.0.0
-github:              "{{github-username}}{{^github-username}}githubuser{{/github-username}}/{{name}}"
-license:             BSD-3-Clause
-author:              "{{author-name}}{{^author-name}}Author name here{{/author-name}}"
-maintainer:          "{{author-email}}{{^author-email}}example@example.com{{/author-email}}"
-copyright:           "{{copyright}}{{^copyright}}{{year}}{{^year}}2024{{/year}} {{author-name}}{{^author-name}}Author name here{{/author-name}}{{/copyright}}"
+name:         {{name}}
+version:      0.1.0.0
+# synopsis:   Short description of your package
+description:  Please see the README on GitHub at <https://github.com/{{github-username}}{{^github-username}}githubuser{{/github-username}}/{{name}}#readme>
+category:     {{category}}{{^category}}Web{{/category}}
+stability:    experimental
+github:       "{{github-username}}{{^github-username}}githubuser{{/github-username}}/{{name}}"
+author:       "{{author-name}}{{^author-name}}Author name here{{/author-name}}"
+maintainer:   "{{author-email}}{{^author-email}}example@example.com{{/author-email}}"
+copyright:    "{{copyright}}{{^copyright}}{{year}}{{^year}}2024{{/year}} {{author-name}}{{^author-name}}Author name here{{/author-name}}{{/copyright}}"
+license:      BSD-3-Clause
 
 extra-source-files:
 - README.md
 - CHANGELOG.md
 - LICENSES/BSD-3-Clause.txt
-
-# Metadata used when publishing your package
-# synopsis:            Short description of your package
-# category:            {{category}}{{^category}}Web{{/category}}
-
-# To avoid duplicated efforts in documentation and dealing with the
-# complications of embedding Haddock markup inside cabal files, it is
-# common to point users to the README.md file.
-description:         Please see the README on GitHub at <https://github.com/{{github-username}}{{^github-username}}githubuser{{/github-username}}/{{name}}#readme>
 
 dependencies:
 - base >= 4.7 && < 5
@@ -42,8 +37,8 @@ library:
 
 executables:
   {{name}}-exe:
-    main:                Main.hs
-    source-dirs:         app
+    main: Main.hs
+    source-dirs: app
     ghc-options:
     - -threaded
     - -rtsopts
@@ -53,8 +48,8 @@ executables:
 
 tests:
   {{name}}-test:
-    main:                Spec.hs
-    source-dirs:         test
+    main: Spec.hs
+    source-dirs: test
     ghc-options:
     - -threaded
     - -rtsopts
