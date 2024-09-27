@@ -36,7 +36,7 @@ library:
   source-dirs: src
 
 executables:
-  {{name}}-exe:
+  {{name}}:
     main: Main.hs
     source-dirs: app
     ghc-options:
@@ -47,8 +47,8 @@ executables:
     - {{name}}
 
 tests:
-  {{name}}-test:
-    main: Spec.hs
+  {{name}}-tests:
+    main: Main.hs
     source-dirs: test
     ghc-options:
     - -threaded
@@ -57,7 +57,7 @@ tests:
     dependencies:
     - {{name}}
 
-{-# START_FILE test/Spec.hs #-}
+{-# START_FILE test/Main.hs #-}
 -- SPDX-FileCopyrightText: Copyright Preetham Gujjula
 -- SPDX-License-Identifier: BSD-3-Clause
 main :: IO ()
