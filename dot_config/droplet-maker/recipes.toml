@@ -1,7 +1,7 @@
 [recipes.base]
 username = "root"
 script = "scripts/base.sh"
-parent = "fedora-39-x64"
+parent = "fedora-40-x64"
 
 [recipes.tools]
 username = "pgujjula"
