@@ -8,6 +8,11 @@ username = "pgujjula"
 script = "scripts/tools.sh"
 parent = "base"
 
+[recipes.sway]
+username = "pgujjula"
+script = "scripts/sway.sh"
+parent = "tools"
+
 [recipes.haskell-base]
 username = "pgujjula"
 script = "scripts/haskell-base.sh"
