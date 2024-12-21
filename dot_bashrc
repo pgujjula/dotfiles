@@ -20,9 +20,6 @@ nvman ()
   nvim -c ":Man $1 | only"
 }
 
-# FZF config
-export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git --ignore .mozilla --ignore .cache --ignore .config --ignore .local -l -g ""'
-
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
 
@@ -49,24 +46,44 @@ export STACK_XDG=1
 # Haskell GHCup
 export GHCUP_USE_XDG_DIRS=1
 
+# FZF config
+export FZF_FD_OPTS='\
+  --hidden --follow \
+  --exclude ".cache" \
+  --exclude ".cargo/registry" \
+  --exclude ".cert" \
+  --exclude ".config/1Password" \
+  --exclude ".config/Beeper" \
+  --exclude ".config/chromium" \
+  --exclude ".config/google-chrome" \
+  --exclude ".git"  \
+  --exclude ".icons/Dracula" \
+  --exclude ".local/lib" \
+  --exclude ".local/share" \
+  --exclude ".local/state" \
+  --exclude ".mozilla/firefox" \
+  --exclude ".nix-defexpr" \
+  --exclude ".nix-profile" \
+  --exclude ".npm/_cacache" \
+  --exclude ".npm/_npx" \
+  --exclude ".nvm" \
+  --exclude "sandbox" \
+  --exclude "snap/todoist" \
+  --exclude ".stack-work" \
+  --exclude ".thunderbird" \
+  --exclude ".var" \
+  --exclude ".zoom/data" \
+  '
+
+export FZF_DEFAULT_COMMAND="fd ${FZF_FD_OPTS}"
+
 # Use fd (https://github.com/sharkdp/fd) for listing path candidates.
 # - The first argument to the function ($1) is the base path to start traversal
 # - See the source code (completion.{bash,zsh}) for the details.
-_fzf_compgen_path() {
-  fd --hidden --follow \
-    --exclude ".git" \
-    --exclude ".cache" \
-    --exclude ".var" \
-    --exclude ".nvm" \
-    --exclude ".nix-profile" \
-    --exclude ".local/share" \
-    . "$1"
-}
+eval "_fzf_compgen_path() { fd ${FZF_FD_OPTS} . \$1 ;}"
 
 # Use fd to generate the list for directory completion
-_fzf_compgen_dir() {
-  fd --type d --hidden --follow --exclude ".git" . "$1"
-}
+eval "_fzf_compgen_dir() { fd --type d ${FZF_FD_OPTS} . \$1 ;}"
 
 # Reload ssh key in remote tmux
 alias fixssh='eval $(tmux showenv -s SSH_AUTH_SOCK)'
