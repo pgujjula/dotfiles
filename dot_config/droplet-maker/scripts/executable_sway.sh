@@ -13,6 +13,8 @@ echo "export WLR_NO_HARDWARE_CURSORS=1" >> ~/.bashrc
 echo "export WLR_RENDERER=pixman" >> ~/.bashrc
 echo "export WLR_RENDERER_ALLOW_SOFTWARE=1" >> ~/.bashrc
 echo "export WLR_LIBINPUT_NO_DEVICES=1" >> ~/.bashrc
+echo "export XDG_CURRENT_DESKTOP=sway" >> ~/.bashrc
+echo "export WAYLAND_DISPLAY=wayland-1" >> ~/.bashrc
 
 ### Clear all traces and exit
 history -c
