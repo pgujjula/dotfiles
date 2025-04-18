@@ -10,7 +10,7 @@ fi
 PROJECT_NAME=$1
 
 stack new $PROJECT_NAME ~/.config/stack-new/new-template.hsfiles \
-  -p "resolver:lts-21.25"
+  -p "resolver:lts-22.43" -p "compiler:ghc-9.6.7"
 cd $PROJECT_NAME
 
 # We use [[ and ]] for wrapping GitHub Actions config values instead of {{ and

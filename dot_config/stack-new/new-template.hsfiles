@@ -418,7 +418,10 @@ jobs:
 {-# START_FILE stack.yaml #-}
 # SPDX-FileCopyrightText: Copyright Preetham Gujjula
 # SPDX-License-Identifier: BSD-3-Clause
+
 resolver: {{resolver}}
+compiler: {{compiler}}
+
 packages:
 - .
 
