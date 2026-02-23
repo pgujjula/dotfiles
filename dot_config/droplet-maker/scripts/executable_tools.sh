@@ -10,22 +10,20 @@ set -e
 sudo sed -e 's/# Host \*/Host \*/g' -i /etc/ssh/ssh_config
 sudo sed -e 's/#   StrictHostKeyChecking ask/   StrictHostKeyChecking accept-new/g' -i /etc/ssh/ssh_config
 
-sudo dnf shell -y << EOF
-upgrade
-install tmux wget unzip zip ncurses-devel cloc time htop traceroute
-install gcc gmp gmp-devel make ncurses ncurses-libs xz perl bat fzf ag
-install exa
-install git
-install neovim
-install xauth
-install nodejs
-install waypipe
-install alacritty
-install python3-pip
-install firefox
-install reuse
-run
-EOF
+sudo dnf upgrade
+sudo dnf install \
+  tmux wget unzip zip ncurses-devel cloc time htop traceroute \
+  gcc gmp gmp-devel make ncurses ncurses-libs xz perl bat fzf ag \
+  exa \
+  git \
+  neovim \
+  xauth \
+  nodejs \
+  waypipe \
+  alacritty \
+  python3-pip \
+  firefox \
+  reuse
 
 ### Install configs
 # Install chezmoi
