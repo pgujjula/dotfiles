@@ -14,11 +14,7 @@ export TMPDIR=$HOME/tmp
 ghcup upgrade
 ghcup install cabal
 ghcup install stack
-ghcup install ghc 9.2.8
-ghcup install ghc 9.4.8
-ghcup install ghc 9.6.5
-ghcup install ghc 9.8.2
-ghcup install ghc 9.10.1
+ghcup install ghc 9.6.7
 ghcup install hls
 export TMPDIR=
 rm -rfv $HOME/tmp
